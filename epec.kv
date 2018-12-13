@@ -1,0 +1,31 @@
+<InitialScreen>:
+    # buttons
+    AnchorLayout:
+        anchor_x:   'center'
+        anchor_y:   'top'
+
+        Button:
+            text:       'Status'
+            size_hint:  (1/3, 1/3)
+            on_press:   root.manager.current = 'status_screen'
+
+    AnchorLayout:
+        anchor_x:   'center'
+        anchor_y:   'bottom'
+
+        Button:
+            text:       'Klienci'
+            size_hint:  (1/3, 1/3)
+            on_press:   root.manager.current = 'client_screen'
+
+<StatusScreen>:
+    BoxLayout:
+        Button:
+            text:       'Powrot'
+            on_press:   root.manager.current = 'initial_screen'
+
+<ClientScreen>:
+    BoxLayout:
+        Button:
+            text:       'Powrot'
+            on_press:   root.manager.current = 'initial_screen'
